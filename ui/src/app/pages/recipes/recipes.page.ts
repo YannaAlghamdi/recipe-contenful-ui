@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ContentfulService } from 'src/app/contentful/contentful.service';
 import { ListOpts } from 'src/app/models/list-opts';
 import { Recipe } from 'src/app/models/recipe';
@@ -12,7 +13,7 @@ export class RecipesPage {
   recipes: Array<Recipe> = new Array<Recipe>();
   listOpts: ListOpts;
 
-  constructor(private contentfulService: ContentfulService) {}
+  constructor(private contentfulService: ContentfulService, private router: Router) {}
 
   ionViewWillEnter() {
     this.listOpts = new ListOpts()
@@ -34,5 +35,9 @@ export class RecipesPage {
 
   load(event) {
     this.getRecipes(true, event);
+  }
+
+  goToDetails(id: string) {
+    this.router.navigate([`recipes/${id}`]);
   }
 }
