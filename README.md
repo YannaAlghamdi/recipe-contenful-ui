@@ -1,4 +1,4 @@
-# recipe-contenful-ui
+# Recipes UI
 
 This is a small front-end application to display recipes using Contentful API.
 
@@ -6,6 +6,7 @@ This is a small front-end application to display recipes using Contentful API.
 
 - Angular 11
 - Ionic 5
+- Jasmine and Karma for unit tests
 
 ## Run the UI
 
