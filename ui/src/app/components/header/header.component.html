@@ -1,0 +1,10 @@
+<ion-header [translucent]="true" class="ion-no-border ion-padding">
+  <ion-toolbar>
+    <ion-buttons  *ngIf="title !== 'My Recipes'" slot="start">
+      <ion-back-button defaultHref="recipes"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
