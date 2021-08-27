@@ -1,0 +1,71 @@
+ion-content,
+ion-toolbar {
+  --background: #f5f3f1;
+}
+
+ion-card {
+  height: 100%;
+  --background: #fff;
+  cursor: pointer;
+}
+
+ion-card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.card-col {
+  margin-bottom: 1rem;
+}
+
+ion-card-title {
+  font-family: "WorkSans";
+  color: #1c0f13;
+  font-weight: 700;
+}
+
+img {
+  padding: 1rem;
+}
+
+.count {
+  font-size: 1rem;
+  display: flex;
+
+  ion-item {
+    --background: #fff;
+    color: #1c0f13;
+  }
+  ion-icon {
+    padding-right: 0.5rem;
+  }
+  ion-label {
+    line-height: 1;
+  }
+}
+
+ion-card,
+img {
+  border-radius: 1.5rem;
+}
+.offset {
+  margin-top: 4rem;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  ion-card-content {
+    width: 100%;
+    display: flex;
+  }
+}
+
+.tag {
+  font-size: 1rem;
+  margin-right: 1rem;
+  background: black;
+  color: #f5f3f1;
+  font-family: "Nunito";
+}

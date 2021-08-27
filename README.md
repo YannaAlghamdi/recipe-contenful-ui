@@ -24,3 +24,11 @@ $ ionic serve
 ```
 
 - Browse thru localhost:8100 on your favorite browser. Enjoy! :)
+
+## Running tests
+
+- To run the unit tests for this application, execute this command:
+
+```bash
+$ npm test
+```

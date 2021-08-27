@@ -6,7 +6,6 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AppInitializerService } from './app-initializer.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ConfigService } from './config.service';
 
@@ -17,19 +16,7 @@ import { ConfigService } from './config.service';
   providers: [
     ConfigService,
     ConfigService.init(),
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    {
-      provide: APP_INITIALIZER,
-      // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
-      useFactory: () => function() {
-        return new AppInitializerService(
-          AppModule.injector.get(HttpClient),
-          AppModule.injector.get(ConfigService)
-        );
-      },
-      deps: [HttpClient],
-      multi: true
-    }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],
 })
