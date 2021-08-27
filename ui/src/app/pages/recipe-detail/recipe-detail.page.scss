@@ -1,0 +1,40 @@
+ion-content,
+ion-toolbar {
+  --background: #f5f3f1;
+}
+
+.title {
+  text-align: center;
+}
+
+.tag {
+  font-size: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  background: black;
+  color: #f5f3f1;
+  font-family: "Nunito";
+}
+
+ion-card-content {
+  font-family: "Nunito";
+  font-size: 1rem;
+  color: #000;
+}
+
+ion-card-title {
+  font-family: "WorkSans";
+  font-weight: bold;
+}
+
+.subtitle {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-top: 0;
+  opacity: 0.6;
+}
+
+.card-footer ion-card-subtitle {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}

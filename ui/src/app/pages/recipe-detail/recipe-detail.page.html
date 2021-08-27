@@ -1,0 +1,27 @@
+<ion-content>
+  <app-header title="Let's get cooking"></app-header>
+
+  <ion-row>
+    <ion-col [size]=8 [offset]=2 class="ion-padding">
+      <ion-card>
+        <img [src]=recipe?.getPhotoUrl()/>
+          <ion-card-header>
+            <ion-card-title>{{ title[0] }}</ion-card-title>
+            <ion-card-title class="subtitle">{{ title[1] }}</ion-card-title>
+            <ion-card-subtitle *ngIf="recipe?.getChef()">
+              <i>by {{ recipe?.getChef() }}</i>
+            </ion-card-subtitle>
+
+            <ion-badge class="tag" item-end *ngFor="let tag of recipe?.getTags()">{{ tag }}</ion-badge>
+
+          </ion-card-header>
+              <ion-card-content [innerHTML]="description">
+              </ion-card-content>
+              <ion-row class="card-footer">
+                <ion-card-subtitle *ngIf="recipe?.getCalories()">Calorie Count: {{ recipe?.getCalories() }} cal
+                </ion-card-subtitle>
+              </ion-row>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

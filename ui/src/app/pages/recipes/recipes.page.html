@@ -2,7 +2,7 @@
 <ion-content [fullscreen]="true">
   <ion-row class="ion-padding">
     <ion-col class="card-col" size-lg="3" size-md="4" size-sm="6" *ngFor="let recipe of recipes; let i = index">
-      <ion-card [attr.id]="'card-item-'+i" [class.offset]="i%2">
+      <ion-card (click)="goToDetails(recipe.getId())" [class.offset]="i%2">
         <img [src]=recipe.getPhotoUrl()/>
         <ion-card-header>
           <ion-badge class="tag" item-end *ngFor="let tag of recipe.getTags()">{{ tag }}</ion-badge>
