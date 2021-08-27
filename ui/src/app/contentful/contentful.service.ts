@@ -30,6 +30,15 @@ export class ContentfulService {
     });
   }
 
+  getRecipeById(id: string): Promise<Recipe> {
+    this.cdaClient = createClient({
+      space: this.configService?.get('spaceID'),
+      accessToken: this.configService?.get('accessToken')
+    });
+    return this.cdaClient.getEntries({'sys.id': id})
+    .then(res => this.deserialize(res.items[0]));
+  }
+
   deserialize(entry: Entry<any>): Recipe {
     const recipe = new Recipe()
       .withTitle(entry.fields?.title)
